@@ -1,0 +1,88 @@
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<head>
+<meta charset="utf-8"/>         
+
+<!-- ---------------------------------------------------- -->
+<script src="logicaFake/diHola.js"></script>
+<script src="logicaFake/hacerLogin.js"></script>
+
+<!-- ---------------------------------------------------- -->
+<script>
+function botonPulsado() {
+
+// llamo a la función de la lógica (versión fake)
+diHola( function( err, res ) {
+  if ( err ) {
+   alert( "usuario no acreditado" )
+   return
+  }
+
+  document.getElementById("salida").innerHTML = res.nombre + " dice: "
+  + res.saludo;
+})
+
+}
+</script>
+
+<!-- ---------------------------------------------------- -->
+<script>
+function loginPulsado() {
+
+var nombre = document.getElementById("nombre").value
+var password = document.getElementById("password").value
+
+// llamo a la función de la lógica (versión fake)
+hacerLogin( nombre, password, function( res ) {
+  // cuando tenga el resultado lo muestro
+  document.getElementById("salida").innerHTML = " login= " + res.resultado;
+
+  // si el login es correcto
+  if ( res.resultado == true ) {
+    alert(" login ok " )
+  } else {
+    alert(" fallo en login (el password es: 1234)" )
+  }
+})
+
+}
+</script>
+
+</head>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<body>
+
+<h1>Aplicación web</h1>
+
+<form>
+  usuario:<br>
+  <input id="nombre" type="text" name="nombre" value="Mickey">
+  <br>
+  password:<br>
+  <input id="password" type="password" name="password" value="Mouse">
+  <br>
+</form> 
+
+<p>
+
+<button type="buton" onclick="loginPulsado()">Log in</button>
+
+<p>
+
+<button type="button" onclick="botonPulsado()">Llamar hola</button>
+
+<p id="salida">Antes</p>
+
+</body>
+</html>
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
