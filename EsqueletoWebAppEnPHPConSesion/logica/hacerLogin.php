@@ -1,16 +1,33 @@
 <?php
 
+//require 'con_bbdd.php';
+
+
 // ---------------------------------------------------------------
 //
-// nombre:Texto, password:Texto -> hacerLogin() -> VoF
+// email:Texto, password:Texto -> hacerLogin() -> VoF
 //
 // ---------------------------------------------------------------
+function hacerLogin( $email, $password ) {
 
-function hacerLogin( $nombre, $password ) {
+  $inc = include("con_bbdd.php");
 
-  // comprobación "rigurosa" del password
-  if ( $password == "1234" ) {
-    return true;
+  if($inc){
+    $consulta = "SELECT * FROM usuarios";
+    $resultado = mysqli_query($conex,$consulta);
+    if($resultado){
+      while($row = $resultado->fetch_array()){
+        
+          $bbddEmail = $row['email'];
+          $bbddPassword = $row['password'];
+
+          echo $password;
+
+          if(($bbddEmail == $email)&&($bbddPassword == $password)){
+            return true;
+          }
+      }
+    }
   }
 
   return false;

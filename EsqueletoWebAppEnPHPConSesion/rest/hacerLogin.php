@@ -4,7 +4,7 @@ require_once('../logica/hacerLogin.php');
 
 // ----------------------------------------------------------------
 //
-// GET ../rest/hacerLogin.php?nombre=<Texto>&password=<Texto>
+// GET ../rest/hacerLogin.php?email=<Texto>&password=<Texto>
 //
 // @return
 //  VoF: true si el login OK
@@ -22,22 +22,21 @@ $objetoResultado = new stdClass;
 session_start();
 
 // obtengo valores de los parámetros
-$nombre = $_GET["nombre"];
+$email = $_GET["email"];
 $password = $_GET["password"];
 
 //
 // llamada a la verdadera función.
 //
-if ( hacerLogin( $nombre, $password) == true  ) {
+if ( hacerLogin( $email, $password) == true  ) {
 
   $objetoResultado->resultado = true;
-  $objetoResultado->usuario = $nombre;
+  $objetoResultado->usuario = $email;
 
-  // guardo en la sesión el nombre del usuario
-  session_start();
-  $_SESSION["usuario"] = $_GET["nombre"];
+  // guardo en la sesión el email del usuario
+  $_SESSION["usuario"] = $_GET["email"];
 
-} else {
+}else{
   session_destroy();
   $objetoResultado->resultado = false;
 }

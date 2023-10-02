@@ -2,12 +2,12 @@
 //
 // versión fake de una función de la lógica
 //
-// nombre:Texto, password:Texto -> hacerLogin() -> Boolean
+// email:Texto, password:Texto -> hacerLogin() -> Boolean
 //
 // (Boolean devuelto via callback)
 //
 // ---------------------------------------------------
-function hacerLogin( nombre, password, cb ) {
+function hacerLogin( email, password, cb ) {
 
 	// preparar la llamada remota
 	var xmlhttp = new XMLHttpRequest();
@@ -18,7 +18,7 @@ function hacerLogin( nombre, password, cb ) {
 		if( this.readyState == 4 && this.status == 200 ){
 			// este es el texto JSON recibido la llamada a
 			// demo_file.php, pasado a objeto JSON 
-			console.log( "recibo: " + this.responseText )
+			console.log( "recibo: " + this.responseText );
 			var resultado = JSON.parse(this.responseText);
 
 			cb( resultado ) // devuelvo el resultado
@@ -27,7 +27,7 @@ function hacerLogin( nombre, password, cb ) {
 	
 	// llamamos *remotamente* al fichero hacerLogin.php
 	// (la verdadera función de la lógica)
-	xmlhttp.open("GET", "../rest/hacerLogin.php?nombre="+nombre+"&password="+password, true);
+	xmlhttp.open("GET", "../rest/hacerLogin.php?email="+email+"&password="+password, true);
 	xmlhttp.send();
 
 } // ()

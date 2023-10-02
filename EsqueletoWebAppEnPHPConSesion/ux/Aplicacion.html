@@ -6,12 +6,11 @@
 <!-- ---------------------------------------------------- -->
 <!-- ---------------------------------------------------- -->
 <head>
-<meta charset="utf-8"/>         
-
+<meta charset="utf-8"/>
+<title>LoginPage</title>         
 <!-- ---------------------------------------------------- -->
 <script src="logicaFake/diHola.js"></script>
 <script src="logicaFake/hacerLogin.js"></script>
-
 <!-- ---------------------------------------------------- -->
 <script>
 function botonPulsado() {
@@ -23,7 +22,7 @@ diHola( function( err, res ) {
    return
   }
 
-  document.getElementById("salida").innerHTML = res.nombre + " dice: "
+  document.getElementById("salida").innerHTML = res.email + " dice: "
   + res.saludo;
 })
 
@@ -34,19 +33,21 @@ diHola( function( err, res ) {
 <script>
 function loginPulsado() {
 
-var nombre = document.getElementById("nombre").value
+var email = document.getElementById("email").value
 var password = document.getElementById("password").value
 
 // llamo a la función de la lógica (versión fake)
-hacerLogin( nombre, password, function( res ) {
+hacerLogin( email, password, function( res ) {
   // cuando tenga el resultado lo muestro
   document.getElementById("salida").innerHTML = " login= " + res.resultado;
 
   // si el login es correcto
   if ( res.resultado == true ) {
     alert(" login ok " )
+    alert("Email: "+email+", Password: "+password)
+    window.location = "UserPage.html";
   } else {
-    alert(" fallo en login (el password es: 1234)" )
+    alert("Email o Password incorrectos" )
   }
 })
 
@@ -62,11 +63,11 @@ hacerLogin( nombre, password, function( res ) {
 <h1>Aplicación web</h1>
 
 <form>
-  usuario:<br>
-  <input id="nombre" type="text" name="nombre" value="Mickey">
+  Email:<br>
+  <input id="email" type="text" name="email" value="example@tipo.com">
   <br>
-  password:<br>
-  <input id="password" type="password" name="password" value="Mouse">
+  Password:<br>
+  <input id="password" type="password" name="password" value="4321">
   <br>
 </form> 
 
