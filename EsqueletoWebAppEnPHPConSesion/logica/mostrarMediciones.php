@@ -8,10 +8,11 @@ if($inc){
     if($resultado){
         while($row = $resultado->fetch_array()){
             $idMedicion = $row['idMedicion'];
-            $idSensor = $row['idSensor'];
-            $valorMedicion = $row['valorMedicion'];
-            $tiempoMedicion = $row['tiempoMedicion'];
             $idUsuario =  $row['idUsuario'];
+            $valorMedicionCO2 = $row['valorMedicionCO2'];
+            $valorMedicionTemp = $row['valorMedicionTemp'];
+            $tiempoMedicion = $row['tiempoMedicion'];
+            
 
             //$consultaUser = "SELECT 'nombre' FROM 'usuarios' WHERE id='$idUsuario' ";
             //$nombreUsuario = mysqli_query($conex,$consultaUser);
@@ -33,8 +34,8 @@ if($inc){
                 <div>
                     <p>
                         <b>ID Medicion: </b> <?php echo $idMedicion; ?><br>
-                        <b>ID Sensor: </b> <?php echo $idSensor; ?><br>
-                        <b>Valor de la Medicion: </b> <?php echo $valorMedicion; ?><br>
+                        <b>Valor de CO2: </b> <?php echo $valorMedicionCO2; ?><br>
+                        <b>Valor de Temperatura: </b> <?php echo $valorMedicionTemp; ?><br>
                         <b>Registrada el: </b> <?php echo $tiempoMedicion; ?><br>
                     </p>
                 </div>

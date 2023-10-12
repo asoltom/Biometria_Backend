@@ -7,4 +7,9 @@ $password='';
 
 $conex = mysqli_connect($host,$username,$password,$bbdd);
 //"nombre_servidor","nombre_usuario"(por defecto en XAMPP),"contraseña","nombre de la BBDD"
+
+$conex->set_charset("utf8");
+    if($conex->connect_errno){
+        $conex=NULL;
+    }   
 ?>
