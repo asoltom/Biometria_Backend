@@ -9,26 +9,7 @@
 <meta charset="utf-8"/>
 <title>LoginPage</title>         
 <!-- ---------------------------------------------------- -->
-<script src="logicaFake/diHola.js"></script>
 <script src="logicaFake/hacerLogin.js"></script>
-<!-- ---------------------------------------------------- -->
-<script>
-function botonPulsado() {
-
-// llamo a la función de la lógica (versión fake)
-diHola( function( err, res ) {
-  if ( err ) {
-   alert( "usuario no acreditado" )
-   return
-  }
-
-  document.getElementById("salida").innerHTML = res.email + " dice: "
-  + res.saludo;
-})
-
-}
-</script>
-
 <!-- ---------------------------------------------------- -->
 <script>
 function loginPulsado() {
@@ -38,9 +19,6 @@ var password = document.getElementById("password").value
 
 // llamo a la función de la lógica (versión fake)
 hacerLogin( email, password, function( res ) {
-  // cuando tenga el resultado lo muestro
-  document.getElementById("salida").innerHTML = " login= " + res.resultado;
-
   // si el login es correcto
   if ( res.resultado == true ) {
     alert(" login ok " )
@@ -76,10 +54,6 @@ hacerLogin( email, password, function( res ) {
 <button type="buton" onclick="loginPulsado()">Log in</button>
 
 <p>
-
-<button type="button" onclick="botonPulsado()">Llamar hola</button>
-
-<p id="salida">Antes</p>
 
 </body>
 </html>
