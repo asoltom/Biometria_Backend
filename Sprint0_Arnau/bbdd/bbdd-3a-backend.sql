@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-10-2023 a las 22:11:35
+-- Tiempo de generación: 15-10-2023 a las 12:45:35
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -22,39 +22,25 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `mediciones` (
-  `idMedicion` int(5) NOT NULL,
-  `idSensor` int(5) NOT NULL,
-  `valorMedicion` float(6,2) NOT NULL,
+  `idMedicion` int(5) NOT NULL COMMENT 'La UUID de la trama iBeacon proveniente de la tabla trama_beacon',
+  `valorMedicionCO2` float(6,2) NOT NULL,
   `tiempoMedicion` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `idUsuario` int(11) NOT NULL COMMENT 'id del usuario proveniente de la tabla usuarios'
+  `idUsuario` int(11) NOT NULL COMMENT 'id del usuario proveniente de la tabla usuarios',
+  `valorMedicionTemp` float(6,2) NOT NULL COMMENT 'valor ''minor'' de la trama iBeacon de la tabla trama_beacon'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `mediciones`
 --
 
-INSERT INTO `mediciones` (`idMedicion`, `idSensor`, `valorMedicion`, `tiempoMedicion`, `idUsuario`) VALUES
-(0, 1234, 1234.00, '2023-10-01 16:41:43', 0);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuarios`
---
-
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nombre`, `email`, `password`) VALUES
-(0, 'TestUser', 'test@biogti.com', '1234');
+INSERT INTO `mediciones` (`idMedicion`, `valorMedicionCO2`, `tiempoMedicion`, `idUsuario`, `valorMedicionTemp`) VALUES
+(0, 1234.00, '2023-10-02 18:02:46', 0, 35.50),
+(2, 1310.00, '2023-10-15 09:33:25', 0, 2023.00),
+(3, 2870.00, '2023-10-15 09:33:25', 1, 235.00),
+(4, 1310.00, '2023-10-15 09:33:53', 0, 2023.00),
+(5, 1310.00, '2023-10-15 09:34:04', 0, 2023.00),
+(7, 2870.00, '2023-10-15 09:37:04', 1, 235.00),
+(8, 2870.00, '2023-10-15 09:45:59', 1, 235.00);
 
 --
 -- Índices para tablas volcadas
@@ -67,12 +53,6 @@ ALTER TABLE `mediciones`
   ADD PRIMARY KEY (`idMedicion`);
 
 --
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -80,11 +60,5 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `mediciones`
 --
 ALTER TABLE `mediciones`
-  MODIFY `idMedicion` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idMedicion` int(5) NOT NULL AUTO_INCREMENT COMMENT 'La UUID de la trama iBeacon proveniente de la tabla trama_beacon', AUTO_INCREMENT=9;
 COMMIT;

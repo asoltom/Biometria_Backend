@@ -12,27 +12,17 @@
     <?php
     include("../logica/mostrarMediciones.php");
     ?>
+
     <div>
         <h1>Bienvenido
-            <?php echo $nombreUsuario; ?>
+            <?php echo(devolverUsuario()) ?>
         </h1>
         <h2>A continuación, se presentan las mediciones de tu dispositivo Arduino</h2>
         <h2>
-            <?php echo $nombreUsuario; ?>
+            <?php echo(devolverUsuario()) ?>
         </h2>
-        <div>
-            <p>
-                <b>ID Medicion: </b>
-                <?php echo $idMedicion; ?><br>
-                <b>Valor de CO2: </b>
-                <?php echo $valorMedicionCO2; ?><br>
-                <b>Valor de Temperatura: </b>
-                <?php echo $valorMedicionTemp; ?><br>
-                <b>Registrada el: </b>
-                <?php echo $tiempoMedicion; ?><br>
-            </p>
-        </div>
     </div>
+    <?php devolverMediciones() ?>
 </body>
 
 </html>
