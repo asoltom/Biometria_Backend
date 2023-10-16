@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="es">
+  <compounddef id="crear_mediciones_8php" kind="file" language="PHP">
+    <compoundname>crearMediciones.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="crear_mediciones_8php_1a6b73fa531944a3d49c055ce34e9c472d" prot="public" static="no" mutable="no">
+        <type>if($estado_test_crearMediciones)</type>
+        <definition>if ( $estado_test_crearMediciones) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+    echo (&quot;fallo en test_crearMediciones&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/crearMediciones.php" line="32" column="2" bodyfile="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/crearMediciones.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Autor:<sp/>Arnau<sp/>Soler<sp/>Tomás</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fichero:<sp/>crearMediciones.php</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Descripción:<sp/>Fichero<sp/>en<sp/>el<sp/>que<sp/>creamos<sp/>las<sp/>Mediciones<sp/>mediante<sp/>los<sp/>parametros<sp/>extraidos<sp/>de<sp/>la<sp/>tabla<sp/>trama_beacon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">include(</highlight><highlight class="stringliteral">&quot;../tests/test_crearMediciones.php&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($estado_test_crearMediciones)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" kindref="member">$inc</ref><sp/>=<sp/>include(</highlight><highlight class="stringliteral">&quot;con_bbdd.php&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" kindref="member">$inc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$consulta<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>trama_beacon&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$resultado<sp/>=<sp/>mysqli_query(<ref refid="con__bbdd_8php_1a4d13e8fe3a8699e8a8dc68ea3e889829" kindref="member">$conex</ref>,<sp/>$consulta);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($resultado)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($row<sp/>=<sp/>$resultado-&gt;fetch_array())<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$id<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$major<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;major&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$minor<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;minor&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//De<sp/>momento<sp/>solo<sp/>tenemos<sp/>un<sp/>usuario,<sp/>por<sp/>lo<sp/>que<sp/>no<sp/>hace<sp/>falta<sp/>pensar<sp/>en<sp/>un<sp/>código<sp/>que<sp/>inserte<sp/>un<sp/>nuevo<sp/>usuario<sp/>ni<sp/>nada</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Por<sp/>eso<sp/>lo<sp/>pongo<sp/>a<sp/>mano</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$idUsuario<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//--------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(($id<sp/>||<sp/>$major<sp/>||<sp/>$minor<sp/>||<sp/>$idUsuario)<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$consulta<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>mediciones<sp/>(idMedicion,<sp/>valorMedicionCO2,<sp/>valorMedicionTemp,<sp/>idUsuario)<sp/>VALUES<sp/>(&apos;$id&apos;,&apos;$major&apos;,&apos;$minor&apos;,&apos;$idUsuario&apos;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$resultado<sp/>=<sp/>mysqli_query(<ref refid="con__bbdd_8php_1a4d13e8fe3a8699e8a8dc68ea3e889829" kindref="member">$conex</ref>,<sp/>$consulta);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32" refid="crear_mediciones_8php_1a6b73fa531944a3d49c055ce34e9c472d" refkind="member"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>(</highlight><highlight class="stringliteral">&quot;fallo<sp/>en<sp/>test_crearMediciones&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/crearMediciones.php"/>
+  </compounddef>
+</doxygen>

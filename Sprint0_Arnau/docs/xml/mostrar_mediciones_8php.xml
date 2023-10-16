@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="es">
+  <compounddef id="mostrar_mediciones_8php" kind="file" language="PHP">
+    <compoundname>mostrarMediciones.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$inc</definition>
+        <argsstring></argsstring>
+        <name>$inc</name>
+        <initializer>= include(&quot;con_bbdd.php&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/mostrarMediciones.php" line="9" column="1" bodyfile="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/mostrarMediciones.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Autor:<sp/>Arnau<sp/>Soler<sp/>Tomás</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fichero:<sp/>mostrarMediciones.php</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Descripción:<sp/>Fichero<sp/>con<sp/>el<sp/>que<sp/>Mostraremos<sp/>las<sp/>mediciones<sp/>en<sp/>la<sp/>página<sp/>del<sp/>usuario</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">include(</highlight><highlight class="stringliteral">&quot;buscarUsuario.php&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">include(</highlight><highlight class="stringliteral">&quot;recogerDatosLogin.php&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9" refid="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" refkind="member"><highlight class="normal"><ref refid="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" kindref="member">$inc</ref><sp/>=<sp/>include(</highlight><highlight class="stringliteral">&quot;con_bbdd.php&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" kindref="member">$inc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>$idUsuario<sp/>=<sp/><ref refid="buscar_usuario_8php_1a8672e98395fa32bef2600a2a1c9826ba" kindref="member">buscarId</ref>(<ref refid="recoger_datos_login_8php_1a03713895e2dbeeee5900107104115212" kindref="member">recuperarDatosLogin</ref>(</highlight><highlight class="stringliteral">&quot;email&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//$idUsuario<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>$consulta<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>mediciones<sp/>WHERE<sp/>idUsuario<sp/>LIKE<sp/>&apos;$idUsuario&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>$resultado<sp/>=<sp/>mysqli_query(<ref refid="con__bbdd_8php_1a4d13e8fe3a8699e8a8dc68ea3e889829" kindref="member">$conex</ref>,<sp/>$consulta);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($resultado)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>($row<sp/>=<sp/>$resultado-&gt;fetch_array())<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$idMedicion<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;idMedicion&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$valorMedicionCO2<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;valorMedicionCO2&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$valorMedicionTemp<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;valorMedicionTemp&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$tiempoMedicion<sp/>=<sp/>$row[</highlight><highlight class="stringliteral">&apos;tiempoMedicion&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$nombreUsuario<sp/>=<sp/><ref refid="buscar_usuario_8php_1add5c1271119107bb0164d65a6504ba80" kindref="member">buscarNombreUsuario</ref>($idUsuario);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/mostrarMediciones.php"/>
+  </compounddef>
+</doxygen>

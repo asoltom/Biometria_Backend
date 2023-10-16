@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sprint0_Backend: Archivo de código fuente C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/con_bbdd.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sprint0_Backend<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Backend del Sprint 0 de Biometria</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1b1d28882521743151be444673a1ce9f.html">Servidor</a></li><li class="navelem"><a class="el" href="dir_de08058f895ddb59af9930412fcdd740.html">Sprint0_Arnau</a></li><li class="navelem"><a class="el" href="dir_d06c78195f3e4a891470e222f84a70cc.html">logica</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">con_bbdd.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="con__bbdd_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Autor: Arnau Soler Tomás</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Fichero: con_bbdd.php</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Descripción: Fichero con el que inicializamos la conexión con la base de datos</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="con__bbdd_8php.html#a711797613cb863ca0756df789c396bf2">    8</a></span><a class="code hl_variable" href="con__bbdd_8php.html#a711797613cb863ca0756df789c396bf2">$host</a>=<span class="stringliteral">&#39;localhost&#39;</span>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="con__bbdd_8php.html#a81c258759a7ab4247decee7439bf95f9">    9</a></span><a class="code hl_variable" href="con__bbdd_8php.html#a81c258759a7ab4247decee7439bf95f9">$bbdd</a>=<span class="stringliteral">&#39;bbdd-3a-backend&#39;</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="con__bbdd_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">   10</a></span><a class="code hl_variable" href="con__bbdd_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>=<span class="stringliteral">&#39;root&#39;</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="con__bbdd_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">   11</a></span><a class="code hl_variable" href="con__bbdd_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>=<span class="stringliteral">&#39;&#39;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="con__bbdd_8php.html#a4d13e8fe3a8699e8a8dc68ea3e889829">   13</a></span><a class="code hl_variable" href="con__bbdd_8php.html#a4d13e8fe3a8699e8a8dc68ea3e889829">$conex</a> = mysqli_connect(<a class="code hl_variable" href="con__bbdd_8php.html#a711797613cb863ca0756df789c396bf2">$host</a>,<a class="code hl_variable" href="con__bbdd_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a>,<a class="code hl_variable" href="con__bbdd_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a>,<a class="code hl_variable" href="con__bbdd_8php.html#a81c258759a7ab4247decee7439bf95f9">$bbdd</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//&quot;nombre_servidor&quot;,&quot;nombre_usuario&quot;(&#39;root&#39; por defecto en XAMPP),&quot;contraseña&quot;,&quot;nombre de la BBDD&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_variable" href="con__bbdd_8php.html#a4d13e8fe3a8699e8a8dc68ea3e889829">$conex</a>-&gt;set_charset(<span class="stringliteral">&quot;utf8&quot;</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="con__bbdd_8php.html#a4d13e8fe3a8699e8a8dc68ea3e889829">$conex</a>-&gt;connect_errno){</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_variable" href="con__bbdd_8php.html#a4d13e8fe3a8699e8a8dc68ea3e889829">$conex</a>=NULL;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }   </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>?&gt;</div>
+<div class="ttc" id="acon__bbdd_8php_html_a0eb82aa5f81cf845de4b36cd653c42cf"><div class="ttname"><a href="con__bbdd_8php.html#a0eb82aa5f81cf845de4b36cd653c42cf">$username</a></div><div class="ttdeci">$username</div><div class="ttdef"><b>Definition</b> <a href="con__bbdd_8php_source.html#l00010">con_bbdd.php:10</a></div></div>
+<div class="ttc" id="acon__bbdd_8php_html_a4d13e8fe3a8699e8a8dc68ea3e889829"><div class="ttname"><a href="con__bbdd_8php.html#a4d13e8fe3a8699e8a8dc68ea3e889829">$conex</a></div><div class="ttdeci">$conex</div><div class="ttdef"><b>Definition</b> <a href="con__bbdd_8php_source.html#l00013">con_bbdd.php:13</a></div></div>
+<div class="ttc" id="acon__bbdd_8php_html_a607686ef9f99ea7c42f4f3dd3dbb2b0d"><div class="ttname"><a href="con__bbdd_8php.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d">$password</a></div><div class="ttdeci">$password</div><div class="ttdef"><b>Definition</b> <a href="con__bbdd_8php_source.html#l00011">con_bbdd.php:11</a></div></div>
+<div class="ttc" id="acon__bbdd_8php_html_a711797613cb863ca0756df789c396bf2"><div class="ttname"><a href="con__bbdd_8php.html#a711797613cb863ca0756df789c396bf2">$host</a></div><div class="ttdeci">$host</div><div class="ttdef"><b>Definition</b> <a href="con__bbdd_8php_source.html#l00008">con_bbdd.php:8</a></div></div>
+<div class="ttc" id="acon__bbdd_8php_html_a81c258759a7ab4247decee7439bf95f9"><div class="ttname"><a href="con__bbdd_8php.html#a81c258759a7ab4247decee7439bf95f9">$bbdd</a></div><div class="ttdeci">$bbdd</div><div class="ttdef"><b>Definition</b> <a href="con__bbdd_8php_source.html#l00009">con_bbdd.php:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

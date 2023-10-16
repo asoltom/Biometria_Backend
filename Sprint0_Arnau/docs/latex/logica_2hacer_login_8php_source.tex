@@ -1,0 +1,37 @@
+\doxysection{hacer\+Login.\+php}
+\hypertarget{logica_2hacer_login_8php_source}{}\label{logica_2hacer_login_8php_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/hacerLogin.php@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/hacerLogin.php}}
+\mbox{\hyperlink{logica_2hacer_login_8php}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00002}00002\ include(\textcolor{stringliteral}{"{}recogerDatosLogin.php"{}});}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00003}00003\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00004}00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00005}00005\ \textcolor{comment}{//\ email:Texto,\ password:N\ -\/>\ hacerLogin()\ -\/>\ VoF}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00007}00007\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00008}\mbox{\hyperlink{logica_2hacer_login_8php_a9f695aa46f63fd5222cba2faf5449984}{00008}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{logica_2hacer_login_8php_a9f695aa46f63fd5222cba2faf5449984}{hacerLogin}}(\ \mbox{\hyperlink{rest_2hacer_login_8php_ad634f418b20382e2802f80532d76d3cd}{\$email}},\ \mbox{\hyperlink{con__bbdd_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{\$password}}\ )\ \{}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00009}00009\ \ \ \mbox{\hyperlink{mostrar_mediciones_8php_ae62114b42bccd4bae6db688c72000802}{\$inc}}\ =\ include(\textcolor{stringliteral}{"{}con\_bbdd.php"{}});}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00010}00010\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{mostrar_mediciones_8php_ae62114b42bccd4bae6db688c72000802}{\$inc}})\{}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00011}00011\ \ \ \ \ \$consulta\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ usuarios"{}};}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00012}00012\ \ \ \ \ \$resultado\ =\ mysqli\_query(\mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}},\$consulta);}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado)\{}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00015}00015\ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\$row\ =\ \$resultado-\/>fetch\_array())\{}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \$bbddEmail\ =\ \$row[\textcolor{stringliteral}{'email'}];}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \$bbddPassword\ =\ \$row[\textcolor{stringliteral}{'password'}];}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((\$bbddEmail\ ==\ \$GLOBALS[\textcolor{stringliteral}{'email'}])\&\&(\$bbddPassword\ ==\ \$GLOBALS[\textcolor{stringliteral}{'password'}]))\{}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{recoger_datos_login_8php_a8af63f32d16f1acc888222c02bd80cd1}{guardarDatosLogin}}(\$bbddEmail,\$bbddPassword);}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00024}00024\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00026}00026\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00028}00028\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{logica_2hacer_login_8php_source_l00031}00031\ ?>}
+
+\end{DoxyCode}

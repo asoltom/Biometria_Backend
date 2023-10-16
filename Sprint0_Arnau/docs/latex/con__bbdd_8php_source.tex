@@ -1,0 +1,26 @@
+\doxysection{con\+\_\+bbdd.\+php}
+\hypertarget{con__bbdd_8php_source}{}\label{con__bbdd_8php_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/con\_bbdd.php@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/con\_bbdd.php}}
+\mbox{\hyperlink{con__bbdd_8php}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00003}00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00004}00004\ \textcolor{comment}{//\ Autor:\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00005}00005\ \textcolor{comment}{//\ Fichero:\ con\_bbdd.php}}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00006}00006\ \textcolor{comment}{//\ Descripción:\ Fichero\ con\ el\ que\ inicializamos\ la\ conexión\ con\ la\ base\ de\ datos}}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00007}00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00008}\mbox{\hyperlink{con__bbdd_8php_a711797613cb863ca0756df789c396bf2}{00008}}\ \mbox{\hyperlink{con__bbdd_8php_a711797613cb863ca0756df789c396bf2}{\$host}}=\textcolor{stringliteral}{'localhost'};}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00009}\mbox{\hyperlink{con__bbdd_8php_a81c258759a7ab4247decee7439bf95f9}{00009}}\ \mbox{\hyperlink{con__bbdd_8php_a81c258759a7ab4247decee7439bf95f9}{\$bbdd}}=\textcolor{stringliteral}{'bbdd-\/3a-\/backend'};}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00010}\mbox{\hyperlink{con__bbdd_8php_a0eb82aa5f81cf845de4b36cd653c42cf}{00010}}\ \mbox{\hyperlink{con__bbdd_8php_a0eb82aa5f81cf845de4b36cd653c42cf}{\$username}}=\textcolor{stringliteral}{'root'};}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00011}\mbox{\hyperlink{con__bbdd_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{00011}}\ \mbox{\hyperlink{con__bbdd_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{\$password}}=\textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00013}\mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{00013}}\ \mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}}\ =\ mysqli\_connect(\mbox{\hyperlink{con__bbdd_8php_a711797613cb863ca0756df789c396bf2}{\$host}},\mbox{\hyperlink{con__bbdd_8php_a0eb82aa5f81cf845de4b36cd653c42cf}{\$username}},\mbox{\hyperlink{con__bbdd_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{\$password}},\mbox{\hyperlink{con__bbdd_8php_a81c258759a7ab4247decee7439bf95f9}{\$bbdd}});}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00014}00014\ \textcolor{comment}{//"{}nombre\_servidor"{},"{}nombre\_usuario"{}('root'\ por\ defecto\ en\ XAMPP),"{}contraseña"{},"{}nombre\ de\ la\ BBDD"{}}}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00016}00016\ \mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}}-\/>set\_charset(\textcolor{stringliteral}{"{}utf8"{}});}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}}-\/>connect\_errno)\{}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}}=NULL;}
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00019}00019\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{con__bbdd_8php_source_l00020}00020\ ?>}
+
+\end{DoxyCode}

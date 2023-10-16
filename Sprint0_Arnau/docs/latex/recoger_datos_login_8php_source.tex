@@ -1,0 +1,66 @@
+\doxysection{recoger\+Datos\+Login.\+php}
+\hypertarget{recoger_datos_login_8php_source}{}\label{recoger_datos_login_8php_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/recogerDatosLogin.php@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/recogerDatosLogin.php}}
+\mbox{\hyperlink{recoger_datos_login_8php}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00003}00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00004}00004\ \textcolor{comment}{//\ Autor:\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00005}00005\ \textcolor{comment}{//\ Fichero:\ recogerDatosLogin.php}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00006}00006\ \textcolor{comment}{//\ Descripción:\ Fichero\ en\ el\ que\ tenemos\ 2\ funciones\ con\ las\ que\ interactuaremos\ entre\ el\ Login\ y\ la\ página\ del\ Usuario}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00007}00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00008}00008\ \textcolor{comment}{//Variables\ Globales\ de\ Prueba}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00009}00009\ \textcolor{comment}{//Los\ inicializo\ con\ los\ datos\ del\ usuario\ de\ prueba}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00010}\mbox{\hyperlink{recoger_datos_login_8php_a478e00e0ae1bb25ea4e136e443c5d25f}{00010}}\ \mbox{\hyperlink{recoger_datos_login_8php_a478e00e0ae1bb25ea4e136e443c5d25f}{\$dato\_email}}\ =\ \textcolor{stringliteral}{"{}test@biogti.com"{}};}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00011}\mbox{\hyperlink{recoger_datos_login_8php_a92369cfefd99db967e96668a682183e7}{00011}}\ \mbox{\hyperlink{recoger_datos_login_8php_a92369cfefd99db967e96668a682183e7}{\$dato\_password}}\ =\ \textcolor{stringliteral}{"{}1234"{}};}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00013}00013\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00014}00014\ \textcolor{comment}{//\ email:Txt,\ password:N\ -\/-\/>\ guardarDatosLogin()\ -\/-\/>\ dataJSON:JSON}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00015}00015\ \textcolor{comment}{//\ Descripción:\ Esta\ función\ nos\ permite\ guardar\ en\ un\ archivo\ JSON\ el\ email\ y\ contraseña\ con\ la\ que\ hemos\ iniciado}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00016}00016\ \textcolor{comment}{//\ en\ el\ Login}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00017}00017\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00018}\mbox{\hyperlink{recoger_datos_login_8php_a8af63f32d16f1acc888222c02bd80cd1}{00018}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{recoger_datos_login_8php_a8af63f32d16f1acc888222c02bd80cd1}{guardarDatosLogin}}(\$emailIntroducido,\ \$passwordIntroducida)}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00020}00020\ \ \ \ \ \$data\ =\ [}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dato\_email'}\ =>\ \$emailIntroducido,}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'dato\_password'}\ =>\ \$passwordIntroducida}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00023}00023\ \ \ \ \ ];}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00024}00024\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00025}00025\ \ \ \ \ \$dataJSON\ =\ json\_encode(\$data);}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00027}00027\ \ \ \ \ file\_put\_contents(\textcolor{stringliteral}{'../docs/dataJSON.json'},\ \$dataJSON);}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00029}00029\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00030}00030\ \textcolor{comment}{//\ queQuiero:Txt,\ dataFile:Txt\ -\/-\/>\ recuperarDatosLogin()\ -\/-\/>\ email:Txt\ ||\ password:N}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00031}00031\ \textcolor{comment}{//\ Descripción:\ Esta\ función\ nos\ permite\ recuperar\ el\ email\ o\ contraseña\ con\ la\ que\ habíamos\ iniciado\ en\ el\ Login}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00032}00032\ \textcolor{comment}{//\ Esto\ lo\ usaremos\ como\ "{}filtro"{}\ para\ buscar\ el\ Usuario}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00033}00033\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00034}\mbox{\hyperlink{recoger_datos_login_8php_a03713895e2dbeeee5900107104115212}{00034}}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{recoger_datos_login_8php_a03713895e2dbeeee5900107104115212}{recuperarDatosLogin}}(\$queQuiero)}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00036}00036\ \ \ \ \ \$dataFile\ =\ file\_get\_contents(\textcolor{stringliteral}{'../docs/dataJSON.json'});}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00037}00037\ \ \ \ \ \$dataLoginJSON\ =\ json\_decode(\$dataFile);}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00038}00038\ \ \ \ \ \$res=\textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (\$queQuiero\ ==\ \textcolor{stringliteral}{"{}email"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \$res=\$dataLoginJSON-\/>dato\_email;}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ unlink(\textcolor{stringliteral}{'../docs/dataJSON.json'});}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00042}00042\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$res;}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00043}00043\ \ \ \ \ \}\ elseif\ (\$queQuiero\ ==\ \textcolor{stringliteral}{"{}password"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ \$res=\$dataLoginJSON-\/>dato\_password;}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00045}00045\ \ \ \ \ \ \ \ \ unlink(\textcolor{stringliteral}{'../docs/dataJSON.json'});}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00046}00046\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$res;}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00051}00051\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00052}00052\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00053}00053\ \textcolor{comment}{Comentarios:}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00054}00054\ \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00055}00055\ \textcolor{comment}{-\/\ Para\ que\ no\ haya\ brechas\ de\ seguridad\ entre\ el\ Login\ y\ la\ Página\ del\ Usuario,\ así\ como\ por\ no\ almacenar\ información}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00056}00056\ \textcolor{comment}{\ \ que\ no\ necesitaremos,\ usamos\ en\ recuperarDatosLogin()\ el\ método\ unlink()\ para\ eliminar\ el\ archivo\ dataJSON.json\ una\ vez}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00057}00057\ \textcolor{comment}{\ \ tengamos\ lo\ que\ queremos\ devolver,\ ya\ sea\ el\ correo\ o\ la\ contraseña.}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00058}00058\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00059}00059\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{recoger_datos_login_8php_source_l00060}00060\ ?>}
+
+\end{DoxyCode}

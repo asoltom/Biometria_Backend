@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="es">
+  <compounddef id="dir_de08058f895ddb59af9930412fcdd740" kind="dir">
+    <compoundname>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau</compoundname>
+    <innerdir refid="dir_d06c78195f3e4a891470e222f84a70cc">C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica</innerdir>
+    <innerdir refid="dir_fde2851a2d604a2ca28a2d617978cfd6">C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/rest</innerdir>
+    <innerdir refid="dir_ec9f5cff7a6afe2f054e779bba23ea4f">C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/tests</innerdir>
+    <innerdir refid="dir_853f54cdb08599302b30529eca644f02">C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/ux</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/"/>
+  </compounddef>
+</doxygen>

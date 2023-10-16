@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="es">
+  <compound refid="buscar_usuario_8php" kind="file"><name>buscarUsuario.php</name>
+    <member refid="buscar_usuario_8php_1add5c1271119107bb0164d65a6504ba80" kind="function"><name>buscarNombreUsuario</name></member>
+    <member refid="buscar_usuario_8php_1a8672e98395fa32bef2600a2a1c9826ba" kind="function"><name>buscarId</name></member>
+  </compound>
+  <compound refid="con__bbdd_8php" kind="file"><name>con_bbdd.php</name>
+    <member refid="con__bbdd_8php_1a711797613cb863ca0756df789c396bf2" kind="variable"><name>$host</name></member>
+    <member refid="con__bbdd_8php_1a81c258759a7ab4247decee7439bf95f9" kind="variable"><name>$bbdd</name></member>
+    <member refid="con__bbdd_8php_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="con__bbdd_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="con__bbdd_8php_1a4d13e8fe3a8699e8a8dc68ea3e889829" kind="variable"><name>$conex</name></member>
+  </compound>
+  <compound refid="crear_mediciones_8php" kind="file"><name>crearMediciones.php</name>
+    <member refid="crear_mediciones_8php_1a6b73fa531944a3d49c055ce34e9c472d" kind="variable"><name>else</name></member>
+  </compound>
+  <compound refid="logica_2hacer_login_8php" kind="file"><name>hacerLogin.php</name>
+    <member refid="logica_2hacer_login_8php_1a9f695aa46f63fd5222cba2faf5449984" kind="function"><name>hacerLogin</name></member>
+  </compound>
+  <compound refid="rest_2hacer_login_8php" kind="file"><name>hacerLogin.php</name>
+    <member refid="rest_2hacer_login_8php_1ae7d056cd7f0dbb8866c340247e347eb0" kind="variable"><name>$objetoResultado</name></member>
+    <member refid="rest_2hacer_login_8php_1ad634f418b20382e2802f80532d76d3cd" kind="variable"><name>$email</name></member>
+    <member refid="rest_2hacer_login_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="rest_2hacer_login_8php_1afe8f077df377c7e6be0e5e909d6a6d86" kind="variable"><name>else</name></member>
+    <member refid="rest_2hacer_login_8php_1a163402a1e308fcd45ab55d13054e1322" kind="variable"><name>resultado</name></member>
+  </compound>
+  <compound refid="mostrar_mediciones_8php" kind="file"><name>mostrarMediciones.php</name>
+    <member refid="mostrar_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" kind="variable"><name>$inc</name></member>
+  </compound>
+  <compound refid="recoger_datos_login_8php" kind="file"><name>recogerDatosLogin.php</name>
+    <member refid="recoger_datos_login_8php_1a478e00e0ae1bb25ea4e136e443c5d25f" kind="variable"><name>$dato_email</name></member>
+    <member refid="recoger_datos_login_8php_1a92369cfefd99db967e96668a682183e7" kind="variable"><name>$dato_password</name></member>
+    <member refid="recoger_datos_login_8php_1a8af63f32d16f1acc888222c02bd80cd1" kind="function"><name>guardarDatosLogin</name></member>
+    <member refid="recoger_datos_login_8php_1a03713895e2dbeeee5900107104115212" kind="function"><name>recuperarDatosLogin</name></member>
+  </compound>
+  <compound refid="enviar_mediciones_8php" kind="file"><name>enviarMediciones.php</name>
+    <member refid="enviar_mediciones_8php_1a1e167bb12c01f40580cfc68b227aa6da" kind="variable"><name>else</name></member>
+  </compound>
+  <compound refid="test__crear_mediciones_8php" kind="file"><name>test_crearMediciones.php</name>
+    <member refid="test__crear_mediciones_8php_1ae62114b42bccd4bae6db688c72000802" kind="variable"><name>$inc</name></member>
+  </compound>
+  <compound refid="_user_page_8php" kind="file"><name>UserPage.php</name>
+  </compound>
+  <compound refid="dir_d06c78195f3e4a891470e222f84a70cc" kind="dir"><name>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica</name>
+  </compound>
+  <compound refid="dir_fde2851a2d604a2ca28a2d617978cfd6" kind="dir"><name>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/rest</name>
+  </compound>
+  <compound refid="dir_1b1d28882521743151be444673a1ce9f" kind="dir"><name>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor</name>
+  </compound>
+  <compound refid="dir_de08058f895ddb59af9930412fcdd740" kind="dir"><name>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau</name>
+  </compound>
+  <compound refid="dir_ec9f5cff7a6afe2f054e779bba23ea4f" kind="dir"><name>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/tests</name>
+  </compound>
+  <compound refid="dir_853f54cdb08599302b30529eca644f02" kind="dir"><name>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/ux</name>
+  </compound>
+</doxygenindex>

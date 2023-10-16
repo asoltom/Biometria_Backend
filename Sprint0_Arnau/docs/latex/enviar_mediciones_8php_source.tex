@@ -1,0 +1,56 @@
+\doxysection{enviar\+Mediciones.\+php}
+\hypertarget{enviar_mediciones_8php_source}{}\label{enviar_mediciones_8php_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/rest/enviarMediciones.php@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/rest/enviarMediciones.php}}
+\mbox{\hyperlink{enviar_mediciones_8php}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00002}00002\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00003}00003\ \textcolor{keywordflow}{if}(\$\_SERVER[\textcolor{stringliteral}{'REQUEST\_METHOD'}]\ ==\ \textcolor{stringliteral}{'POST'})\{}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00005}00005\ \ \ \ \ \textcolor{comment}{//Creamos\ conexión\ con\ la\ BBDD}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{mostrar_mediciones_8php_ae62114b42bccd4bae6db688c72000802}{\$inc}}\ =\ include(\textcolor{stringliteral}{"{}../logica/con\_bbdd.php"{}});}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{mostrar_mediciones_8php_ae62114b42bccd4bae6db688c72000802}{\$inc}})\{}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$str\ =\ \$\_SERVER[\textcolor{stringliteral}{'QUERY\_STRING'}];}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ print(\$str);}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ parse\_str(\$str,\$output);}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$prefijo\ =\ \$output[\textcolor{stringliteral}{'prefijo'}];}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$uuid\ =\ \$output[\textcolor{stringliteral}{'uuid'}];}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \$major\ =\ \$output[\textcolor{stringliteral}{'major'}];}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$minor\ =\ \$output[\textcolor{stringliteral}{'minor'}];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00021}00021\ \textcolor{comment}{\ \ \ \ \ \ \ \ -\/-\/-\/Borrar\ todo\ lo\ que\ haya\ en\ la\ tabla-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00022}00022\ \textcolor{comment}{\ \ \ \ \ \ \ \ \$consEmpty\ =\ "{}DELETE\ FROM\ trama\_beacon"{};}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00023}00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ \$resEmpty\ =\ mysqli\_query(\$conex,\$consEmpty);}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00024}00024\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00027}00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \$prefijo\ =\ "{}test"{};}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00028}00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ \$uuid\ =\ "{}ff:ff:0A:3C"{};}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00029}00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ \$major\ =\ "{}1234"{};}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00030}00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ \$minor\ =\ "{}4321"{};}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00031}00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((\$prefijo||\$uuid||\$major||\$minor)!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ trama\_beacon\ (prefijo,\ uuid,\ major,\ minor)\ VALUES\ ('\$prefijo',\ '\$uuid',\ '\$major',\ '\$minor')"{}};}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado\ =\ mysqli\_query(\mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}},\$consulta);}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\$resultado)\{}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}trama\ iBeacon\ creada"{}};}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ include(\textcolor{stringliteral}{"{}../logica/crearMediciones.php"{}});}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{echo\ \textcolor{stringliteral}{"{}Error"{}};\}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00044}00044\ \ \ \ \ \ \ \ \ echo\ \textcolor{stringliteral}{"{}Conexión\ fallida"{}};}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00047}\mbox{\hyperlink{enviar_mediciones_8php_a1e167bb12c01f40580cfc68b227aa6da}{00047}}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00048}00048\ \ \ \ \ echo\ \textcolor{stringliteral}{"{}No\ hay\ petición\ POST"{}};}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{enviar_mediciones_8php_source_l00050}00050\ ?>}
+
+\end{DoxyCode}

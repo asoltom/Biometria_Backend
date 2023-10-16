@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="es">
+  <compounddef id="dir_d06c78195f3e4a891470e222f84a70cc" kind="dir">
+    <compoundname>C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica</compoundname>
+    <innerfile refid="buscar_usuario_8php">buscarUsuario.php</innerfile>
+    <innerfile refid="con__bbdd_8php">con_bbdd.php</innerfile>
+    <innerfile refid="crear_mediciones_8php">crearMediciones.php</innerfile>
+    <innerfile refid="logica_2hacer_login_8php">hacerLogin.php</innerfile>
+    <innerfile refid="mostrar_mediciones_8php">mostrarMediciones.php</innerfile>
+    <innerfile refid="recoger_datos_login_8php">recogerDatosLogin.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-2024/Proyecto Biometria/Sprint 0 - Individual/Servidor/Sprint0_Arnau/logica/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+\doxysection{crear\+Mediciones.\+php}
+\hypertarget{crear_mediciones_8php_source}{}\label{crear_mediciones_8php_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/crearMediciones.php@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/logica/crearMediciones.php}}
+\mbox{\hyperlink{crear_mediciones_8php}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00003}00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00004}00004\ \textcolor{comment}{//\ Autor:\ Arnau\ Soler\ Tomás}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00005}00005\ \textcolor{comment}{//\ Fichero:\ crearMediciones.php}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00006}00006\ \textcolor{comment}{//\ Descripción:\ Fichero\ en\ el\ que\ creamos\ las\ Mediciones\ mediante\ los\ parametros\ extraidos\ de\ la\ tabla\ trama\_beacon}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00007}00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00008}00008\ include(\textcolor{stringliteral}{"{}../tests/test\_crearMediciones.php"{}});}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00009}00009\ \textcolor{keywordflow}{if}\ (\$estado\_test\_crearMediciones)\ \{}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{mostrar_mediciones_8php_ae62114b42bccd4bae6db688c72000802}{\$inc}}\ =\ include(\textcolor{stringliteral}{"{}con\_bbdd.php"{}});}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{mostrar_mediciones_8php_ae62114b42bccd4bae6db688c72000802}{\$inc}})\ \{}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \$consulta\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ FROM\ trama\_beacon"{}};}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \$resultado\ =\ mysqli\_query(\mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}},\ \$consulta);}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$resultado)\ \{}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$row\ =\ \$resultado-\/>fetch\_array())\ \{}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$id\ =\ \$row[\textcolor{stringliteral}{'id'}];}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$major\ =\ \$row[\textcolor{stringliteral}{'major'}];}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$minor\ =\ \$row[\textcolor{stringliteral}{'minor'}];}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ momento\ solo\ tenemos\ un\ usuario,\ por\ lo\ que\ no\ hace\ falta\ pensar\ en\ un\ código\ que\ inserte\ un\ nuevo\ usuario\ ni\ nada}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Por\ eso\ lo\ pongo\ a\ mano}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \$idUsuario\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\$id\ ||\ \$major\ ||\ \$minor\ ||\ \$idUsuario)\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \$consulta\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ mediciones\ (idMedicion,\ valorMedicionCO2,\ valorMedicionTemp,\ idUsuario)\ VALUES\ ('\$id','\$major','\$minor','\$idUsuario')"{}};}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \$resultado\ =\ mysqli\_query(\mbox{\hyperlink{con__bbdd_8php_a4d13e8fe3a8699e8a8dc68ea3e889829}{\$conex}},\ \$consulta);}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00032}\mbox{\hyperlink{crear_mediciones_8php_a6b73fa531944a3d49c055ce34e9c472d}{00032}}\ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00033}00033\ \ \ \ \ echo\ (\textcolor{stringliteral}{"{}fallo\ en\ test\_crearMediciones"{}});}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{crear_mediciones_8php_source_l00036}00036\ ?>}
+
+\end{DoxyCode}

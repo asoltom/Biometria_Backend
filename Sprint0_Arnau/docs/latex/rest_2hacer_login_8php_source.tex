@@ -1,0 +1,52 @@
+\doxysection{hacer\+Login.\+php}
+\hypertarget{rest_2hacer_login_8php_source}{}\label{rest_2hacer_login_8php_source}\index{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/rest/hacerLogin.php@{C:/Users/clavi/Desktop/UPV Gandia/UPV Gandia 2023-\/2024/Proyecto Biometria/Sprint 0 -\/ Individual/Servidor/Sprint0\_Arnau/rest/hacerLogin.php}}
+\mbox{\hyperlink{rest_2hacer_login_8php}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00003}00003\ require\_once(\textcolor{stringliteral}{'../logica/hacerLogin.php'});}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00005}00005\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00007}00007\ \textcolor{comment}{//\ GET\ ../rest/hacerLogin.php?email=<Texto>\&password=<Texto>}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00008}00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00009}00009\ \textcolor{comment}{//\ @return}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00010}00010\ \textcolor{comment}{//\ \ VoF:\ true\ si\ el\ login\ OK}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00011}00011\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00012}00012\ \textcolor{comment}{//\ @return}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00013}00013\ \textcolor{comment}{//\ \ usuario:Texto}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00014}00014\ \textcolor{comment}{//\ \ \ \ \ \ \ devuelto\ implicitamente\ en\ la\ variable\ global\ de\ sesión}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00015}00015\ \textcolor{comment}{//\ \ \ \ \ \ \ (en\ el\ navegador\ no\ se\ pordrá\ acceder\ a\ la\ var.\ global)}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00016}00016\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00017}00017\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00019}\mbox{\hyperlink{rest_2hacer_login_8php_ae7d056cd7f0dbb8866c340247e347eb0}{00019}}\ \mbox{\hyperlink{rest_2hacer_login_8php_ae7d056cd7f0dbb8866c340247e347eb0}{\$objetoResultado}}\ =\ \textcolor{keyword}{new}\ stdClass;}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00021}00021\ \textcolor{comment}{//\ creo\ una\ sesión\ }}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00022}00022\ session\_start();}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00024}00024\ \textcolor{comment}{//\ obtengo\ valores\ de\ los\ parámetros}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00025}\mbox{\hyperlink{rest_2hacer_login_8php_ad634f418b20382e2802f80532d76d3cd}{00025}}\ \mbox{\hyperlink{rest_2hacer_login_8php_ad634f418b20382e2802f80532d76d3cd}{\$email}}\ =\ \$\_GET[\textcolor{stringliteral}{"{}email"{}}];}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00026}\mbox{\hyperlink{rest_2hacer_login_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{00026}}\ \mbox{\hyperlink{con__bbdd_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{\$password}}\ =\ \$\_GET[\textcolor{stringliteral}{"{}password"{}}];}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00028}00028\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00029}00029\ \textcolor{comment}{//\ llamada\ a\ la\ verdadera\ función.}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00030}00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00031}00031\ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{logica_2hacer_login_8php_a9f695aa46f63fd5222cba2faf5449984}{hacerLogin}}(\ \mbox{\hyperlink{rest_2hacer_login_8php_ad634f418b20382e2802f80532d76d3cd}{\$email}},\ \mbox{\hyperlink{con__bbdd_8php_a607686ef9f99ea7c42f4f3dd3dbb2b0d}{\$password}})\ ==\ \textcolor{keyword}{true}\ \ )\ \{}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00033}00033\ \ \ \mbox{\hyperlink{rest_2hacer_login_8php_ae7d056cd7f0dbb8866c340247e347eb0}{\$objetoResultado}}-\/>resultado\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00034}00034\ \ \ \mbox{\hyperlink{rest_2hacer_login_8php_ae7d056cd7f0dbb8866c340247e347eb0}{\$objetoResultado}}-\/>usuario\ =\ \mbox{\hyperlink{rest_2hacer_login_8php_ad634f418b20382e2802f80532d76d3cd}{\$email}};}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00036}00036\ \ \ \textcolor{comment}{//\ guardo\ en\ la\ sesión\ el\ email\ del\ usuario}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00037}00037\ \ \ \$\_SESSION[\textcolor{stringliteral}{"{}usuario"{}}]\ =\ \$\_GET[\textcolor{stringliteral}{"{}email"{}}];}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00039}\mbox{\hyperlink{rest_2hacer_login_8php_afe8f077df377c7e6be0e5e909d6a6d86}{00039}}\ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00040}00040\ \ \ session\_destroy();}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00041}\mbox{\hyperlink{rest_2hacer_login_8php_a163402a1e308fcd45ab55d13054e1322}{00041}}\ \ \ \mbox{\hyperlink{rest_2hacer_login_8php_ae7d056cd7f0dbb8866c340247e347eb0}{\$objetoResultado}}-\/>resultado\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00044}00044\ \textcolor{comment}{//\ echo\ ==\ devolver}}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00045}00045\ echo\ json\_encode(\ \mbox{\hyperlink{rest_2hacer_login_8php_ae7d056cd7f0dbb8866c340247e347eb0}{\$objetoResultado}}\ );}
+\DoxyCodeLine{\Hypertarget{rest_2hacer_login_8php_source_l00046}00046\ ?>}
+
+\end{DoxyCode}
